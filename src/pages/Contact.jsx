@@ -17,7 +17,7 @@ export default function Contact() {
     <>
       <PageBanner eyebrow="Contact" title="Get in touch"
         text="Whether you're looking for an opportunity, a service or a partnership, write to us and the right person will reply."
-        image={images.laptopGroup} />
+        image={images.laptopGroup} curve="swoopLeft" />
       <section className="py-20">
         <div className="container-x grid gap-16 lg:grid-cols-[1fr_2fr]">
           <dl className="h-fit border-t-2 border-ink">

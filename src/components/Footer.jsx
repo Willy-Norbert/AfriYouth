@@ -20,8 +20,13 @@ const year = new Date().getFullYear()
 
 export default function Footer() {
   return (
-    <footer className="bg-ink text-sm text-white/80">
-      <div className="container-x grid gap-12 py-16 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
+    <footer className="relative bg-ink text-sm text-white/80">
+      {/* Curved top edge: the newsletter band's colour above an arch */}
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 -top-px h-[42px] w-full sm:h-[58px]">
+        <path d="M0 0H1440V60Q720 -60 0 60z" fill="#1800ad" />
+      </svg>
+      <div className="container-x grid gap-12 pb-16 pt-24 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         {/* Big tagline */}
         <p className="max-w-xs text-4xl font-semibold leading-[1.05] tracking-tight text-white">
           Evidence. Innovation. Youth-led change.
@@ -29,7 +34,7 @@ export default function Footer() {
 
         {/* Office */}
         <div>
-          <h3 className={label}>Kigali</h3>
+          <p className={label}>Kigali</p>
           <a href={`mailto:${site.email}`} className={underlined}>{site.email}</a>
           <p className="mt-1.5">{site.phone}</p>
           <p className="mt-1.5">{site.address}</p>
@@ -41,7 +46,7 @@ export default function Footer() {
 
         {/* Links */}
         <div>
-          <h3 className={label}>Explore</h3>
+          <p className={label}>Explore</p>
           <ul className="space-y-1.5">
             {explore.map(([text, to]) => (
               <li key={text}><Link to={to} className="hover:text-white hover:underline hover:underline-offset-4">{text}</Link></li>
@@ -51,11 +56,11 @@ export default function Footer() {
 
         {/* Newsletter + socials */}
         <div>
-          <h3 className={label}>Want new opportunities<br />in your inbox?</h3>
+          <p className={label}>Want new opportunities<br />in your inbox?</p>
           <a href="#newsletter" className={`text-xs font-semibold uppercase tracking-[0.12em] text-white ${underlined}`}>
             Sign up for our newsletter →
           </a>
-          <h3 className={`${label} mt-8`}>Follow us</h3>
+          <p className={`${label} mt-8`}>Follow us</p>
           <div className="flex items-center gap-7">
             {socials.map((s) => (
               <a key={s.label} href={s.href} target="_blank" rel="noreferrer" aria-label={s.label}

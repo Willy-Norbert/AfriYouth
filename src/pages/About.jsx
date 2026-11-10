@@ -4,6 +4,7 @@ import { valueArt } from '../components/ValuesArt'
 import Button from '../components/Button'
 import { Squiggle } from '../components/Doodles'
 import ImpactSection from '../sections/ImpactSection'
+import PartnerCta from '../sections/PartnerCta'
 import { images } from '../data/images'
 
 const values = [
@@ -20,7 +21,7 @@ export default function About() {
     <>
       <PageBanner eyebrow="About us" title="We connect evidence, policy and innovation — led by youth."
         text="AfriYouth Innovation Labs empowers Africa's youth to generate evidence, shape policy and develop innovative solutions to pressing socio-economic challenges."
-        image={images.team} />
+        image={images.team} curve="dip" />
 
       <section id="mission" className="py-24">
         <div className="container-x grid gap-12 lg:grid-cols-2">
@@ -72,6 +73,7 @@ export default function About() {
           </div>
         </div>
       </section>
+      <PartnerCta />
       <ImpactSection />
     </>
   )

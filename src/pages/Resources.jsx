@@ -14,7 +14,7 @@ export default function Resources() {
   return (
     <>
       <PageBanner eyebrow="Resources" title="Research, briefs and tools — all in one place."
-        text="Explore evidence and insights produced by and with Africa's youth." image={images.lecture} />
+        text="Explore evidence and insights produced by and with Africa's youth." image={images.lecture} curve="ripple" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-col gap-3 sm:flex-row">

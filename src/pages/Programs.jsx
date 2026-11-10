@@ -14,7 +14,7 @@ export default function Programs() {
   return (
     <>
       <PageBanner eyebrow="Programs" title="Programs that turn potential into leadership."
-        text="Choose a program by area. Each one shows who it's for, what you'll gain and how to join." image={images.workshop} />
+        text="Choose a program by area. Each one shows who it's for, what you'll gain and how to join." image={images.workshop} curve="arch" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter programs by area">

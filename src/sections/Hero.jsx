@@ -128,7 +128,7 @@ export default function Hero() {
 
       {/* Curved bottom edge, in the colour of the next section */}
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-10 w-full sm:h-14">
+        className="pointer-events-none absolute inset-x-0 -bottom-px h-[42px] w-full sm:h-[58px]">
         <path d="M0 0Q720 120 1440 0V60H0z" fill="#ffe9da" />
       </svg>
     </section>
