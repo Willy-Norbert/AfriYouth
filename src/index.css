@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* Gilgongo Doro — used for the hero headline (public/fonts/GilgongoDoro.ttf) */
+@font-face {
+  font-family: "Gilgongo Doro";
+  src: url("/fonts/GilgongoDoro.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Brand colours — taken from the AfriYouth logo (public/logo.png).
+   Logo colours: orange #FF751F, indigo #1800AD, light blue #5D7AFF.
+   The older token names are kept so the components don't change;
+   each one now points to a logo colour or a tint/shade of one.
+   Change them here and the whole site updates. */
+@theme {
+  --color-ink: #12093f;       /* deep indigo (logo indigo, darkened) – text & dark sections */
+  --color-royal: #1800ad;     /* logo indigo – links, highlights */
+  --color-sky: #eceffe;       /* light blue tint – soft backgrounds */
+  --color-teal: #5d7aff;      /* logo light blue (fingerprint) */
+  --color-plum: #3a25c8;      /* indigo, lighter – variety on cards */
+  --color-sun: #ff9756;       /* light orange – accents on dark backgrounds */
+  --color-tangerine: #ff751f; /* logo orange – main buttons & accents */
+  --color-coral: #e2560b;     /* deep orange */
+  --color-cream: #fff5ec;     /* warm orange tint – soft backgrounds */
+
+  --font-display: "Young Serif", Georgia, serif;
+  --font-sans: "DM Sans", system-ui, sans-serif;
+  --font-hero: "Gilgongo Doro", "Young Serif", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+img {
+  color: transparent; /* hide alt text while images load */
+}
+
+body {
+  @apply bg-white font-sans text-ink antialiased;
+}
+
+h1, h2, h3, h4 {
+  @apply font-display;
+  letter-spacing: -0.01em;
+}
+
+/* Reusable layout width */
+.container-x {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-8;
+}
+
+/* Fade-up animation used by <Reveal> */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Network lines on the hero map */
+@keyframes dash {
+  to { stroke-dashoffset: -40; }
+}
+.animate-dash {
+  animation: dash 2.5s linear infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-dash, .animate-float, .animate-ping { animation: none; }
+}
+
+/* Young Serif has one weight — never fake-bold it (kept outside layers so it wins) */
+h1, h2, h3, h4, .font-display, .font-hero {
+  font-weight: 400;
+  font-synthesis: none;
+}
+
+h1.font-hero {
+  font-family: var(--font-hero);
+}

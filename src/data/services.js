@@ -1,0 +1,21 @@
+// Services AfriYouth offers to organisations and partners.
+export const services = [
+  { icon: 'Search', title: 'Youth-centred research', pillar: 'research',
+    text: 'Surveys, field studies and participatory research designed and run with young people.',
+    includes: ['Study design', 'Data collection', 'Analysis & reports'] },
+  { icon: 'Landmark', title: 'Policy analysis & briefs', pillar: 'policy',
+    text: 'Clear, evidence-based policy options on youth employment, skills and inclusion.',
+    includes: ['Policy briefs', 'Stakeholder dialogues', 'Policy labs'] },
+  { icon: 'Lightbulb', title: 'Design sprints & innovation labs', pillar: 'design',
+    text: 'Human-centred design workshops that move teams from problem to tested prototype.',
+    includes: ['Co-design workshops', 'Prototyping', 'User testing'] },
+  { icon: 'GraduationCap', title: 'Capacity building', pillar: 'entrepreneurship',
+    text: 'Tailored training for staff and youth in design thinking, research and leadership.',
+    includes: ['Training programs', 'Mentorship', 'Toolkits'] },
+  { icon: 'Telescope', title: 'Foresight & scenarios', pillar: 'foresight',
+    text: 'Scenario planning that helps institutions prepare for the future of work and society.',
+    includes: ['Trend scans', 'Scenario workshops', 'Futures reports'] },
+  { icon: 'ChartLine', title: 'Monitoring, evaluation & learning', pillar: 'impact',
+    text: 'Frameworks and evaluations that show what changed, for whom and why.',
+    includes: ['MEL frameworks', 'Impact evaluations', 'Learning reviews'] },
+]
