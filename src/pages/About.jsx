@@ -24,15 +24,16 @@ const tapeEdge = 'polygon(0 8%, 4% 0, 8% 10%, 12% 2%, 88% 0, 92% 9%, 96% 1%, 100
 export default function About() {
   return (
     <>
-      <PageBanner eyebrow="About us" title="An African innovation and policy lab."
-        text="AfriYouth Innovation Labs is a research, innovation and policy consulting firm that identifies, nurtures and advances promising ideas from Africa’s young innovators to address the Sustainable Development Goals (SDGs)."
+      <PageBanner eyebrow="About us" title="About AfriYouth"
+        text="An African innovation and policy lab that identifies, nurtures and advances ideas from Africa’s young innovators to address the SDGs."
         image={images.celebration} curve="dip" />
 
       <section id="mission" className="py-24">
         <div className="container-x">
           <p className="mx-auto max-w-3xl text-center text-lg text-ink/70">
-            Through human-centered design, applied research and innovation, we transform community-driven ideas
-            into practical and scalable solutions that contribute to the socio-economic transformation of Africa and beyond.
+            AfriYouth Innovation Labs identifies, nurtures and advances promising ideas from Africa’s young innovators
+            to address the SDGs. Through human-centered design, applied research and innovation, we turn community-driven
+            ideas into practical, scalable solutions for Africa and beyond.
           </p>
           <div className="mt-14 grid gap-12 lg:grid-cols-2">
             <Reveal className="rounded-lg bg-sun p-10">

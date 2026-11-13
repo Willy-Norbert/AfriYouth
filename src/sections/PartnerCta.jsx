@@ -12,7 +12,7 @@ export default function PartnerCta() {
             <Sun className="mb-6 size-16" />
             <h2 className="text-3xl font-extrabold sm:text-5xl">Let's build Africa's future together.</h2>
             <p className="mt-4 max-w-md text-white/85">
-              Need research, policy support, foresight or an impact framework? Want to back the Evidence-to-Impact Accelerator? We'd love to hear from you.
+              Need research, policy support, foresight or an impact framework? Want to back The Evidence to Impact Accelerator? We'd love to hear from you.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Button to="/contact?topic=partnership" variant="light">Partner with us</Button>

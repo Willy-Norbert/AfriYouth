@@ -13,8 +13,8 @@ export default function Programs() {
 
   return (
     <>
-      <PageBanner eyebrow="Programs" title="Programs that turn ideas and potential into impact."
-        text="Practical, outcome-oriented programs for young innovators, students, graduates and professionals. Each one shows who it's for, how it works and how to join." image={images.vrLearning} curve="arch" />
+      <PageBanner eyebrow="Programs" title="Our programs"
+        text="Practical, hands-on programs for young innovators, students, graduates and professionals." image={images.vrLearning} curve="arch" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter programs by area">

@@ -16,7 +16,7 @@ export default function Contact() {
   return (
     <>
       <PageBanner eyebrow="Contact" title="Get in touch"
-        text="Whether you're looking for an opportunity, a service or a partnership, write to us and the right person will reply."
+        text="Looking for an opportunity, a service or a partnership? Write to us and the right person will reply within 3 working days."
         image={images.laptopGroup} curve="swoopLeft" />
       <section className="py-20">
         <div className="container-x grid gap-16 lg:grid-cols-[1fr_2fr]">

@@ -58,7 +58,7 @@ export const supporting = [
 // Everything in one list (used by the menu)
 export const services = [...labs, ...supporting]
 
-// Flagship product: the Evidence-to-Impact Accelerator — research, incubation and training combined.
+// Flagship product: The Evidence to Impact Accelerator — research, incubation and training combined.
 export const acceleratorStages = [
   ['Discover', 'Identify the problem through community research.'],
   ['Diagnose', 'Understand root causes using systems and political-economy analysis.'],

@@ -13,8 +13,8 @@ export default function Resources() {
 
   return (
     <>
-      <PageBanner eyebrow="Resources" title="Evidence, policy solutions and futures, all in one place."
-        text="AfriYouth Evidence Reports, the Policy Solutions Series, the Africa 2050 Futures Series and practical toolkits." image={images.vrDesk} curve="ripple" />
+      <PageBanner eyebrow="Resources" title="Resources"
+        text="Evidence reports, the Policy Solutions Series, Africa 2050 futures studies and practical toolkits." image={images.vrDesk} curve="ripple" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-col gap-3 sm:flex-row">

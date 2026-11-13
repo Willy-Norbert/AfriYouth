@@ -43,8 +43,8 @@ function ServiceCard({ s, i }) {
 export default function Services() {
   return (
     <>
-      <PageBanner eyebrow="What we do" title="Research, policy and innovation for Africa’s most pressing challenges."
-        text="Six labs and two supporting services for governments, NGOs, development partners, universities and companies. Everything sits within our five strategic divisions."
+      <PageBanner eyebrow="What we do" title="What we do"
+        text="Six labs and two supporting services for governments, NGOs, development partners and companies."
         image={images.fieldEngineers} curve="wave" />
 
       <section className="py-24">
@@ -67,7 +67,7 @@ export default function Services() {
       <section id="accelerator" className="scroll-mt-20 bg-ink py-24 text-white">
         <div className="container-x">
           <p className="text-sm font-bold uppercase tracking-[0.2em] text-sun">Our flagship product</p>
-          <h2 className="mt-3 text-3xl font-extrabold sm:text-5xl">The Evidence-to-Impact Accelerator</h2>
+          <h2 className="mt-3 text-3xl font-extrabold sm:text-5xl">The Evidence to Impact Accelerator</h2>
           <p className="mt-5 max-w-2xl text-lg text-white/70">
             Instead of disconnected research, incubation and training programmes, we combine them: ten stages
             that take a community problem all the way to a solution that scales.

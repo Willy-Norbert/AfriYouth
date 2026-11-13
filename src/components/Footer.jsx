@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Logo from './Logo'
 import { site, socials } from '../data/site'
 
 const explore = [
@@ -28,13 +27,10 @@ export default function Footer() {
         <path d="M0 0H1440V60Q720 -60 0 60z" fill="#0200a7" />
       </svg>
       <div className="container-x grid gap-12 pb-16 pt-24 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
-        {/* Logo + big tagline */}
-        <div>
-          <Logo light />
-          <p className="mt-8 max-w-xs font-display text-3xl font-bold leading-[1.1] tracking-tight text-white">
-            {site.tagline}
-          </p>
-        </div>
+        {/* Big tagline */}
+        <p className="max-w-xs text-4xl font-semibold leading-[1.05] tracking-tight text-white">
+          Evidence. Innovation. Youth-led change.
+        </p>
 
         {/* Office */}
         <div>
