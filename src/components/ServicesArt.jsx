@@ -1,7 +1,9 @@
+import { InnovationArt, GlobalArt } from './ValuesArt'
+
 // Cartoon illustrations for the six services on the Services page.
 // Same hand-drawn style as AudienceArt and ValuesArt: brand colours, African details.
 
-const ink = '#1b1030'
+const ink = '#0d0624'
 
 function Frame({ id, bg, children }) {
   return (
@@ -16,7 +18,7 @@ function Frame({ id, bg, children }) {
 }
 
 // Shoulders, neck and head, with a simple happy face
-function Bust({ skin, shirt, hair, cheek = '#e2560b', children }) {
+function Bust({ skin, shirt, hair, cheek = '#a01bb4', children }) {
   return (
     <>
       <path d="M24 122c0-22 16-34 36-34s36 12 36 34z" fill={shirt} />
@@ -39,10 +41,10 @@ const shortHair = <path d="M41 54c-1-14 7-21 19-21s20 7 19 21c-3-7-9-10-19-10s-1
 
 const kente = (id) => (
   <pattern id={id} width="8" height="8" patternUnits="userSpaceOnUse">
-    <rect width="8" height="8" fill="#ff751f" />
+    <rect width="8" height="8" fill="#c723df" />
     <rect width="4" height="4" fill={ink} />
-    <rect x="4" y="4" width="4" height="4" fill="#1800ad" />
-    <rect y="3.4" width="8" height="1.2" fill="#ffd166" />
+    <rect x="4" y="4" width="4" height="4" fill="#0200a7" />
+    <rect y="3.4" width="8" height="1.2" fill="#9d8cff" />
   </pattern>
 )
 
@@ -57,14 +59,14 @@ export function ResearchArt() {
   return (
     <Frame id="svc-research" bg="#dfe4ff">
       <circle cx="60" cy="27" r="14" fill={ink} />
-      <Bust skin={skin} shirt="#ff751f" hair={puff}>
-        <path d="M86 106Q92 92 86 80" fill="none" stroke="#ff751f" strokeWidth="10" strokeLinecap="round" />
+      <Bust skin={skin} shirt="#c723df" hair={puff}>
+        <path d="M86 106Q92 92 86 80" fill="none" stroke="#c723df" strokeWidth="10" strokeLinecap="round" />
       </Bust>
-      <circle cx="41" cy="66" r="2.4" fill="#ffd166" />
+      <circle cx="41" cy="66" r="2.4" fill="#9d8cff" />
       {/* magnifying glass */}
       <path d="M90 66l-7 12" stroke={ink} strokeWidth="5" strokeLinecap="round" />
-      <circle cx="96" cy="54" r="12" fill="#fff" fillOpacity=".7" stroke="#1800ad" strokeWidth="4" />
-      <path d="M90 50q3-4 8-4" fill="none" stroke="#5d7aff" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="96" cy="54" r="12" fill="#fff" fillOpacity=".7" stroke="#0200a7" strokeWidth="4" />
+      <path d="M90 50q3-4 8-4" fill="none" stroke="#0301ff" strokeWidth="2" strokeLinecap="round" />
       <circle cx="84" cy="79" r="6" fill={skin} />
     </Frame>
   )
@@ -83,15 +85,15 @@ export function PolicyArt() {
         <rect x="30" y="46" width="4" height="30" /><rect x="38" y="46" width="4" height="30" />
         <rect x="27" y="22" width="2" height="6" />
       </g>
-      <Bust skin={skin} shirt="#3a25c8" hair={shortHair} cheek="#ff9756">
+      <Bust skin={skin} shirt="#7e1ced" hair={shortHair} cheek="#e57cf2">
         <path d="M52 90l8 10 8-10" fill="#fff" />
-        <path d="M58 92h4l1 14-3 4-3-4z" fill="#ff751f" />
+        <path d="M58 92h4l1 14-3 4-3-4z" fill="#c723df" />
       </Bust>
       {/* document */}
       <g transform="rotate(-6 84 102)">
         <rect x="70" y="86" width="28" height="34" rx="2" fill="#fff" />
         <path d="M75 94h18M75 100h18M75 106h12" stroke="#9aa1d4" strokeWidth="2.4" strokeLinecap="round" />
-        <circle cx="90" cy="113" r="3.5" fill="#ff751f" />
+        <circle cx="90" cy="113" r="3.5" fill="#c723df" />
       </g>
       <ellipse cx="70" cy="104" rx="5.5" ry="5" fill={skin} />
     </Frame>
@@ -108,15 +110,15 @@ export function SprintArt() {
     </>
   )
   return (
-    <Frame id="svc-sprint" bg="#ffe1c9">
+    <Frame id="svc-sprint" bg="#f9e3fc">
       <defs>{kente('svc-sprint-k')}</defs>
       <path d="M96 24l2.5 6 6 2.5-6 2.5-2.5 6-2.5-6-6-2.5 6-2.5z" fill="#fff" />
-      <Bust skin={skin} shirt="#1800ad" hair={wrap} />
+      <Bust skin={skin} shirt="#0200a7" hair={wrap} />
       {/* tablet */}
       <g transform="rotate(-4 60 106)">
         <rect x="38" y="90" width="44" height="32" rx="4" fill={ink} />
         <rect x="41" y="93" width="38" height="26" rx="2" fill="#fff" />
-        <rect x="44" y="96" width="14" height="9" rx="1" fill="#ff9756" />
+        <rect x="44" y="96" width="14" height="9" rx="1" fill="#e57cf2" />
         <path d="M61 97h14M61 101h10M44 109h31M44 113h22" stroke="#9aa1d4" strokeWidth="2" strokeLinecap="round" />
       </g>
       <ellipse cx="38" cy="106" rx="5" ry="4.5" fill={skin} />
@@ -133,14 +135,14 @@ export function CapacityArt() {
       {shortHair}
       <path d="M60 22l30 11-30 11-30-11z" fill={ink} />
       <path d="M44 38v8c0 3 7 6 16 6s16-3 16-6v-8l-16 6z" fill={ink} />
-      <path d="M86 34v14" stroke="#ff751f" strokeWidth="2" />
-      <circle cx="86" cy="50" r="3" fill="#ff751f" />
+      <path d="M86 34v14" stroke="#c723df" strokeWidth="2" />
+      <circle cx="86" cy="50" r="3" fill="#c723df" />
     </>
   )
   return (
-    <Frame id="svc-capacity" bg="#ffdccb">
+    <Frame id="svc-capacity" bg="#f7dcfb">
       <defs>{kente('svc-capacity-k')}</defs>
-      <Bust skin={skin} shirt={ink} hair={cap} cheek="#ff9756">
+      <Bust skin={skin} shirt={ink} hair={cap} cheek="#e57cf2">
         <path d="M44 92l8 30M76 92l-8 30" stroke="url(#svc-capacity-k)" strokeWidth="9" />
       </Bust>
     </Frame>
@@ -156,15 +158,15 @@ export function ForesightArt() {
         <circle cx="22" cy="30" r="1.6" /><circle cx="34" cy="16" r="1.2" /><circle cx="18" cy="56" r="1.2" />
         <circle cx="70" cy="14" r="1.4" /><circle cx="104" cy="56" r="1.2" />
       </g>
-      <path d="M100 18l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#ffd166" />
-      <Bust skin={skin} shirt="#ff751f" hair={shortHair}>
-        <path d="M86 106Q94 92 86 80" fill="none" stroke="#ff751f" strokeWidth="10" strokeLinecap="round" />
+      <path d="M100 18l2 5 5 2-5 2-2 5-2-5-5-2 5-2z" fill="#9d8cff" />
+      <Bust skin={skin} shirt="#c723df" hair={shortHair}>
+        <path d="M86 106Q94 92 86 80" fill="none" stroke="#c723df" strokeWidth="10" strokeLinecap="round" />
       </Bust>
       {/* telescope */}
       <g transform="rotate(-35 80 60)">
-        <rect x="70" y="54" width="36" height="12" rx="3" fill="#5d7aff" />
-        <rect x="102" y="52" width="8" height="16" rx="2" fill="#1800ad" />
-        <rect x="64" y="56" width="8" height="8" rx="2" fill="#1800ad" />
+        <rect x="70" y="54" width="36" height="12" rx="3" fill="#0301ff" />
+        <rect x="102" y="52" width="8" height="16" rx="2" fill="#0200a7" />
+        <rect x="64" y="56" width="8" height="8" rx="2" fill="#0200a7" />
       </g>
       <circle cx="84" cy="79" r="6" fill={skin} />
     </Frame>
@@ -176,8 +178,8 @@ export function MelArt() {
   const skin = '#5f3520'
   return (
     <Frame id="svc-mel" bg="#e3f2e8">
-      <Bust skin={skin} shirt="#3a25c8" hair={shortHair} cheek="#ff9756">
-        <path d="M49 91l11 12 11-12" fill="none" stroke="#ffd166" strokeWidth="4" strokeLinejoin="round" />
+      <Bust skin={skin} shirt="#7e1ced" hair={shortHair} cheek="#e57cf2">
+        <path d="M49 91l11 12 11-12" fill="none" stroke="#9d8cff" strokeWidth="4" strokeLinejoin="round" />
       </Bust>
       {/* glasses */}
       <g fill="none" stroke={ink} strokeWidth="1.8">
@@ -186,18 +188,21 @@ export function MelArt() {
       {/* laptop */}
       <rect x="30" y="84" width="60" height="34" rx="3" fill="#9aa1d4" />
       <rect x="33" y="87" width="54" height="28" rx="2" fill="#fff" />
-      <path d="M38 109l10-8 8 4 10-10 12-6" fill="none" stroke="#ff751f" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="78" cy="89" r="2.5" fill="#ff751f" />
+      <path d="M38 109l10-8 8 4 10-10 12-6" fill="none" stroke="#c723df" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      <circle cx="78" cy="89" r="2.5" fill="#c723df" />
       <rect x="22" y="116" width="76" height="6" rx="2" fill="#7f87cc" />
     </Frame>
   )
 }
 
+// Keyed by the slugs in data/services.js
 export const serviceArt = {
-  'Youth-centred research': ResearchArt,
-  'Policy analysis & briefs': PolicyArt,
-  'Design sprints & innovation labs': SprintArt,
-  'Capacity building': CapacityArt,
-  'Foresight & scenarios': ForesightArt,
-  'Monitoring, evaluation & learning': MelArt,
+  'venture-lab': SprintArt,
+  'research-lab': ResearchArt,
+  'policy-lab': PolicyArt,
+  'policy-innovation-challenge': InnovationArt,
+  'futures-lab': ForesightArt,
+  'career-academy': CapacityArt,
+  'impact-learning': MelArt,
+  'funding-readiness': GlobalArt,
 }

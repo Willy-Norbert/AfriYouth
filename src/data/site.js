@@ -1,7 +1,12 @@
 // General site settings: navigation, contact details, social links.
 export const site = {
   name: 'AfriYouth Innovation Labs',
-  tagline: 'Evidence. Innovation. Youth-led transformation.',
+  // Main tagline (from "About AfriYouth Innovation Labs", Sept 2026)
+  tagline: '',
+  // Brand-guide tagline, part of the logo lockup
+  brandLine: 'Fueling Innovators for Sustainable Development',
+  // Core philosophy
+  philosophy: ['Think', 'Research', 'Design', 'Build', 'Influence', 'Scale'],
   email: 'hello@afriyouthlabs.org',
   phone: '+250 788 000 000',
   address: 'Kigali, Rwanda',

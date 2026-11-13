@@ -6,7 +6,7 @@ import { audiences } from '../data/audiences'
 // "Who are you?" — the three main journeys.
 export default function AudiencePaths() {
   return (
-    <section className="bg-[#ffe9da] py-20 sm:py-24">
+    <section className="bg-[#f6e6fb] py-20 sm:py-24">
       <div className="container-x">
         <SectionHeading center eyebrow="Start here" title="Who are you?"
           text="Choose the path that fits you and we'll show you where to go next." />

@@ -4,59 +4,100 @@ import Reveal from '../components/Reveal'
 import { serviceArt } from '../components/ServicesArt'
 import Button from '../components/Button'
 import { colors } from '../components/colors'
-import { services } from '../data/services'
+import { labs, supporting, acceleratorStages } from '../data/services'
 import { pillars } from '../data/pillars'
 import { images } from '../data/images'
 
-const steps = ['Tell us your challenge', 'We co-design a plan', 'We deliver with youth', 'We measure the impact']
+// One lab / service card: illustration, title, short text, full list of services, product.
+function ServiceCard({ s, i }) {
+  const c = colors[pillars.find((p) => p.slug === s.pillar).color]
+  const Art = serviceArt[s.slug]
+  return (
+    <Reveal delay={(i % 3) * 60} className="h-full">
+      <article id={s.slug} className="group flex h-full scroll-mt-28 flex-col rounded-lg bg-white p-7 ring-1 ring-ink/10">
+        <span className="block size-20 transition duration-300 group-hover:-rotate-3 group-hover:scale-105"><Art /></span>
+        <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
+        <p className="mt-2 text-ink/70">{s.text}</p>
+        {s.model && (
+          <p className="mt-4 text-sm font-semibold text-ink/80">
+            <span className="sr-only">How it works: </span>
+            {s.model.join(' → ')}
+          </p>
+        )}
+        <p className="mt-5 text-xs font-semibold uppercase tracking-[0.15em] text-ink/45">{s.includesLabel || 'Services'}</p>
+        <ul className="mt-3 flex-1 space-y-2 text-sm">
+          {s.includes.map((x) => <li key={x} className="flex items-start gap-2"><CircleCheck className={`mt-0.5 size-4 shrink-0 ${c.text}`} />{x}</li>)}
+        </ul>
+        {s.product && (
+          <div className={`mt-6 rounded-md px-4 py-3 ${c.soft}`}>
+            <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink/55">Product</p>
+            <p className="mt-1 font-bold">{s.product}</p>
+            {s.note && <p className="mt-1 text-sm text-ink/65">{s.note}</p>}
+          </div>
+        )}
+      </article>
+    </Reveal>
+  )
+}
 
 export default function Services() {
   return (
     <>
-      <PageBanner eyebrow="What we do" title="Expertise for organisations that want youth-centred results."
-        text="We support governments, NGOs, development partners and companies with research, policy, innovation and capacity building."
-        image={images.meeting} curve="wave" />
+      <PageBanner eyebrow="What we do" title="Research, policy and innovation for Africa’s most pressing challenges."
+        text="Six labs and two supporting services for governments, NGOs, development partners, universities and companies. Everything sits within our five strategic divisions."
+        image={images.fieldEngineers} curve="wave" />
 
       <section className="py-24">
-        <div className="container-x grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {services.map((s, i) => {
-            const c = colors[pillars.find((p) => p.slug === s.pillar).color]
-            const Art = serviceArt[s.title]
-            return (
-              <Reveal key={s.title} delay={i * 60} className="group flex h-full flex-col rounded-lg bg-white p-7 ring-1 ring-ink/10">
-                <span className="block size-20 transition duration-300 group-hover:-rotate-3 group-hover:scale-105"><Art /></span>
-                <h3 className="mt-5 text-xl font-bold">{s.title}</h3>
-                <p className="mt-2 flex-1 text-ink/70">{s.text}</p>
-                <ul className="mt-5 space-y-2 text-sm">
-                  {s.includes.map((x) => <li key={x} className="flex items-center gap-2"><CircleCheck className={`size-4 ${c.text}`} />{x}</li>)}
-                </ul>
-              </Reveal>
-            )
-          })}
+        <div className="container-x">
+          <h2 className="text-3xl sm:text-5xl">Our labs</h2>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {labs.map((s, i) => <ServiceCard key={s.slug} s={s} i={i} />)}
+          </div>
+
+          <h2 id="supporting" className="mt-24 scroll-mt-28 text-3xl sm:text-5xl">Supporting services</h2>
+          <p className="mt-4 max-w-2xl text-lg text-ink/70">
+            Resource Mobilization &amp; Partnerships is a cross-cutting commercial service that supports every division.
+          </p>
+          <div className="mt-12 grid gap-6 md:grid-cols-2">
+            {supporting.map((s, i) => <ServiceCard key={s.slug} s={s} i={i} />)}
+          </div>
         </div>
       </section>
 
-      <section className="bg-ink py-24 text-white">
+      <section id="accelerator" className="scroll-mt-20 bg-ink py-24 text-white">
         <div className="container-x">
-          <h2 className="text-3xl font-extrabold sm:text-5xl">How we work with you</h2>
-          <ol className="mt-16 grid gap-x-10 gap-y-12 md:grid-cols-2 lg:grid-cols-4">
-            {steps.map((step, i) => (
-              <li key={step} className="relative flex min-h-32 items-center rounded-lg bg-white/5 py-8 pl-28 pr-6 ring-1 ring-white/10">
-                {/* Big outlined number that spills over the card's left edge and fades out */}
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-sun">Our flagship product</p>
+          <h2 className="mt-3 text-3xl font-extrabold sm:text-5xl">The Evidence-to-Impact Accelerator</h2>
+          <p className="mt-5 max-w-2xl text-lg text-white/70">
+            Instead of disconnected research, incubation and training programmes, we combine them: ten stages
+            that take a community problem all the way to a solution that scales.
+          </p>
+          <ol className="mt-14 grid gap-y-14 sm:grid-cols-2 lg:grid-cols-5">
+            {acceleratorStages.map(([title, text], i) => (
+              <li key={title}>
+                {/* Big outlined number that fades out */}
                 <span aria-hidden="true"
-                  className="pointer-events-none absolute -left-3 top-1/2 sm:-left-6 -translate-y-1/2 select-none font-display text-[7rem] leading-none text-transparent"
+                  className="block select-none font-display text-[6.5rem] leading-[0.8] text-transparent"
                   style={{
-                    WebkitTextStroke: '2px #ff9756',
-                    maskImage: 'linear-gradient(to bottom, #000 25%, transparent 92%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom, #000 25%, transparent 92%)',
+                    WebkitTextStroke: '2px #e57cf2',
+                    maskImage: 'linear-gradient(to bottom, #000 30%, transparent 100%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom, #000 30%, transparent 100%)',
                   }}>
-                  0{i + 1}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
-                <p className="relative text-lg font-bold leading-snug"><span className="sr-only">Step {i + 1}: </span>{step}</p>
+                {/* One line runs across all steps, with a dot for each */}
+                <div className="relative mt-3 border-t border-white/20 pt-6 sm:pr-8">
+                  <span className="absolute -top-[5px] left-0 size-2.5 rounded-full bg-sun" aria-hidden="true" />
+                  <p className="text-xl font-bold"><span className="sr-only">Stage {i + 1}: </span>{title}</p>
+                  <p className="mt-2 text-white/65">{text}</p>
+                </div>
               </li>
             ))}
           </ol>
-          <Button to="/contact?topic=service" className="mt-12">Request a service</Button>
+          <div className="mt-12 flex flex-wrap gap-3">
+            <Button to="/programs/evidence-to-impact-accelerator">About the Accelerator</Button>
+            <Button to="/contact?topic=service" variant="outline" arrow={false}>Request a service</Button>
+          </div>
         </div>
       </section>
     </>

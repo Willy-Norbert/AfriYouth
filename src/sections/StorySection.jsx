@@ -13,12 +13,11 @@ export default function StorySection() {
 
         <div>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.2em] text-tangerine">Why we exist</p>
-          <h2 className="text-3xl font-extrabold sm:text-5xl">
-            Africa is young. <span className="text-royal">So are we.</span>
+          <h2 className="max-w-md text-3xl leading-[1.1] sm:text-[2.75rem]">
+            Africa will have the world’s <span className="text-royal">largest workforce</span> by 2030.
           </h2>
-          <p className="mt-5 max-w-md text-lg text-ink/70">
-            Six in ten Africans are under 25. AfriYouth is run by young people who do the research,
-            sit in the policy rooms and build the ventures themselves.
+          <p className="mt-5 max-w-md text-lg leading-relaxed text-ink/70">
+            We give young people the capacity to solve African problems and build their own future.
           </p>
           <Button to="/about" variant="dark" className="mt-8">Our story</Button>
         </div>

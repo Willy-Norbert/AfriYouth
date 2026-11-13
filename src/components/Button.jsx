@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight } from 'lucide-react'
 
 const styles = {
-  primary: 'bg-tangerine text-ink hover:bg-sun',
+  primary: 'bg-tangerine text-white hover:bg-coral',
   dark: 'bg-ink text-white hover:bg-royal',
   light: 'bg-white text-ink hover:bg-cream',
   outline: 'border-2 border-current hover:bg-white/10',

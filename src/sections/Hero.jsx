@@ -1,6 +1,7 @@
 import { useLayoutEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import HeroMap from '../components/HeroMap'
+import HeroTitle from '../components/HeroTitle'
 import africa from '../data/africa.json'
 import { activeCountries } from '../data/countries'
 import { programs } from '../data/programs'
@@ -62,11 +63,11 @@ export default function Hero() {
   }, [selected]) // eslint-disable-line react-hooks/exhaustive-deps
 
   return (
-    <section className="relative overflow-hidden bg-[linear-gradient(#eceffe_0_44%,#fff5ec_44%)]">
+    <section className="relative overflow-hidden bg-[linear-gradient(#ececff_0_44%,#fbeefd_44%)]">
       <div ref={containerRef} className="container-x relative pb-20 pt-14 lg:min-h-[860px]">
-        <h1 className="font-hero text-center text-5xl leading-none sm:text-7xl lg:text-8xl">Built by Africa's youth</h1>
-        <p className="mx-auto mt-5 max-w-sm text-center text-ink/70">
-          Research, policy and innovation led by young people, in {countryNames.length} countries and growing.
+        <HeroTitle className="text-[2.6rem] leading-none sm:text-7xl lg:text-8xl" />
+        <p className="mx-auto mt-5 max-w-md text-center text-ink/70">
+          We turn ideas from Africa's young innovators into practical, scalable solutions, in {countryNames.length} countries and growing.
         </p>
         <p className="mt-3 text-center">
           <Link to="/programs"
@@ -85,7 +86,7 @@ export default function Hero() {
             {lines.map((l) => {
               const on = hovered === l.slug
               const dim = hovered && !on
-              const color = on ? '#ff751f' : '#1800ad'
+              const color = on ? '#c723df' : '#0200a7'
               return (
                 <g key={l.key} className="transition-opacity duration-300" opacity={dim ? 0.12 : on ? 1 : 0.45}>
                   <path d={l.d} fill="none" stroke={color} strokeWidth={on ? 2 : 1.3}
@@ -109,7 +110,7 @@ export default function Hero() {
 
         {/* Short statement, bottom right */}
         <p className="mx-auto mt-6 max-w-xs text-center text-ink/70 lg:absolute lg:bottom-16 lg:right-8 lg:mx-0 lg:mt-0 lg:max-w-[15rem] lg:text-left">
-          Turning youth-led evidence into better policy and lasting solutions across Africa.
+          A research, innovation and policy lab turning youth-led ideas into solutions for the SDGs.
         </p>
 
         {/* Photo cards: in a row on phones, floating around the map on desktop */}
@@ -129,7 +130,7 @@ export default function Hero() {
       {/* Curved bottom edge, in the colour of the next section */}
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -bottom-px h-[42px] w-full sm:h-[58px]">
-        <path d="M0 0Q720 120 1440 0V60H0z" fill="#ffe9da" />
+        <path d="M0 0Q720 120 1440 0V60H0z" fill="#f6e6fb" />
       </svg>
     </section>
   )

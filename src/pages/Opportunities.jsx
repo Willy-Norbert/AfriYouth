@@ -17,7 +17,7 @@ export default function Opportunities() {
   return (
     <>
       <PageBanner eyebrow="Opportunities" title="Your next step starts here."
-        text="Fellowships, trainings, internships and partnership calls — with clear requirements and deadlines." image={images.benchLaptops} curve="sCurve" />
+        text="Policy challenges, bootcamps, accelerator cohorts and partnership calls — with clear deadlines." image={images.benchLaptops} curve="sCurve" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-wrap gap-6">

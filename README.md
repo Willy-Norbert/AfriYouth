@@ -37,10 +37,11 @@ src/
 
 | To change…                     | Edit this file             |
 |--------------------------------|----------------------------|
-| Contact details, menu links     | `src/data/site.js`         |
-| Work areas (pillars)            | `src/data/pillars.js`      |
-| Services                        | `src/data/services.js`     |
-| Programs                        | `src/data/programs.js`     |
+| Contact details, tagline, philosophy | `src/data/site.js`    |
+| Strategic divisions (5)         | `src/data/pillars.js`      |
+| Labs, supporting services, Evidence-to-Impact stages | `src/data/services.js` |
+| Programs (products)             | `src/data/programs.js`     |
+| Menu                            | `src/data/menu.js`         |
 | Opportunities (add / close)     | `src/data/opportunities.js`|
 | Resources / publications        | `src/data/resources.js`    |
 | Impact numbers, partner types   | `src/data/impact.js`       |
@@ -59,20 +60,32 @@ Forms send messages to email through [Web3Forms](https://web3forms.com) — free
 
 Without a key, forms show a success message (demo mode) but don't send anything.
 
+## Brand (from the AfriYouth brand guidelines)
+
+- **Logo:** `public/logo.svg` (colour, navbar), `public/logo-white.svg` (white with tagline, footer),
+  `public/logo-tagline.svg` (colour with tagline), `public/favicon.svg` + PNG icons.
+- **Colours:** Blue `#0301FF`, Steel Pink `#C723DF`, Duke Blue `#0200A7`, Dark Purple `#0D0624`, White —
+  set in `src/index.css` (`@theme`).
+- **Fonts:** titles use Poppins. The hero headline is Poppins with a Gilgongo-style zigzag cut into each letter (`src/components/HeroTitle.jsx`; to change the words, edit and run `gen/hero_svg.py`). Poppins (self-hosted via `@fontsource/poppins`). Gilroy is the brand body font but needs a
+  paid licence: add the licensed `.woff2` files to `public/fonts/` and uncomment the `@font-face` rules in
+  `src/index.css`. Until then body text uses Plus Jakarta Sans (free, similar look).
+
 ## Photos
 
-Current photos are free-to-use images from Unsplash (real photos, not AI-generated).
-Replace them with AfriYouth's own photos: put files in `public/images/` and use
-`'/images/your-photo.jpg'` in `src/data/images.js`.
+Photos in `public/images/` are the brand photography from the brand guidelines.
+The others are free-to-use Unsplash images — replace them with AfriYouth's own photos: put files in
+`public/images/` and use `'/images/your-photo.webp'` in `src/data/images.js`.
 
 ## Placeholder content
 
-Program names, impact numbers, countries, partner types and contact details are placeholders
-until the official AfriYouth content is added.
+Labs, services, divisions, programs, mission and vision come from "About AfriYouth Innovation Labs"
+(Sept 2026). Still placeholders: impact numbers, countries on the map, opportunity dates, resource titles,
+partner types and contact details.
 
 ## Key features
 
 - "Who are you?" entry paths for youth, organisations and partners
+- Six labs + two supporting services, and the 10-stage Evidence-to-Impact Accelerator
 - Colourful, textile-pattern Africa map with a live network from Kigali
 - Interactive "Where we work" map (hover, tap or keyboard)
 - Filterable programs, opportunities and resources

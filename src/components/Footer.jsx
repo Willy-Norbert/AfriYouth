@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import Logo from './Logo'
 import { site, socials } from '../data/site'
 
 const explore = [
@@ -24,13 +25,16 @@ export default function Footer() {
       {/* Curved top edge: the newsletter band's colour above an arch */}
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"
         className="pointer-events-none absolute inset-x-0 -top-px h-[42px] w-full sm:h-[58px]">
-        <path d="M0 0H1440V60Q720 -60 0 60z" fill="#1800ad" />
+        <path d="M0 0H1440V60Q720 -60 0 60z" fill="#0200a7" />
       </svg>
       <div className="container-x grid gap-12 pb-16 pt-24 sm:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
-        {/* Big tagline */}
-        <p className="max-w-xs text-4xl font-semibold leading-[1.05] tracking-tight text-white">
-          Evidence. Innovation. Youth-led change.
-        </p>
+        {/* Logo + big tagline */}
+        <div>
+          <Logo light />
+          <p className="mt-8 max-w-xs font-display text-3xl font-bold leading-[1.1] tracking-tight text-white">
+            {site.tagline}
+          </p>
+        </div>
 
         {/* Office */}
         <div>

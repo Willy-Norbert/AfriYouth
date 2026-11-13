@@ -9,12 +9,12 @@ export default function Programs() {
   const [params, setParams] = useSearchParams()
   const area = params.get('area') || 'all'
   const list = area === 'all' ? programs : programs.filter((p) => p.pillar === area)
-  const tabs = [{ slug: 'all', title: 'All programs' }, ...pillars]
+  const tabs = [{ slug: 'all', title: 'All programs' }, ...pillars.filter((d) => programs.some((p) => p.pillar === d.slug))]
 
   return (
     <>
-      <PageBanner eyebrow="Programs" title="Programs that turn potential into leadership."
-        text="Choose a program by area. Each one shows who it's for, what you'll gain and how to join." image={images.workshop} curve="arch" />
+      <PageBanner eyebrow="Programs" title="Programs that turn ideas and potential into impact."
+        text="Practical, outcome-oriented programs for young innovators, students, graduates and professionals. Each one shows who it's for, how it works and how to join." image={images.vrLearning} curve="arch" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter programs by area">

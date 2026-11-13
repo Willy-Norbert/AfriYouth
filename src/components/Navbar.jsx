@@ -34,7 +34,7 @@ export default function Navbar() {
     `flex items-center gap-1 py-7 text-[15px] font-bold transition hover:text-royal ${on ? 'text-royal' : ''}`
 
   return (
-    <header ref={headerRef} className="sticky top-0 z-50 bg-white shadow-[0_1px_0_#12093f14]"
+    <header ref={headerRef} className="sticky top-0 z-50 bg-white shadow-[0_1px_0_#0d062414]"
       onMouseLeave={() => setActive(null)} onKeyDown={(e) => e.key === 'Escape' && setActive(null)}>
       <nav className="container-x flex h-20 items-center justify-between gap-8" aria-label="Main">
         <Logo />

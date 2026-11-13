@@ -1,17 +1,27 @@
-// All photos in one place. Replace these links with AfriYouth's own photos
-// (put files in /public/images and use "/images/name.jpg").
+// All photos in one place.
+// Files in public/images/ are AfriYouth brand photography (from the brand guidelines).
+// The rest are free-to-use Unsplash photos — replace them with AfriYouth's own
+// (put files in /public/images and use "/images/name.webp").
 const u = (id, w = 1200) =>
   `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&w=${w}&q=70`
 
 export const images = {
-  hero: u('1604933762021-54a5858c9832', 900),
+  // Brand photography
+  hero: '/images/startup-celebration.webp',
+  celebration: '/images/startup-celebration.webp',
+  vrLearning: '/images/vr-learning.webp',
+  fieldEngineers: '/images/field-engineers.webp',
+  vrDesk: '/images/vr-desk.webp',
+  electronics: '/images/electronics.webp',
+  soldering: '/images/soldering.webp',
+
+  // Unsplash (placeholders)
   team: u('1620479589423-0abc990883cb'),
   workshop: u('1758270705518-b61b40527e76'),
   laptopGroup: u('1655720357872-ce227e4164ba'),
   benchLaptops: u('1655720348590-c739c860beed'),
   coding: u('1531482615713-2afd69097998'),
   meeting: u('1573497701240-345a300b8d36'),
-  celebration: u('1515657241610-a6b33f0f6c5a'),
   lecture: u('1758270705067-0d7edee57af0'),
   founder: u('1573497019418-b400bb3ab074', 800),
   graduate: u('1594750852563-5ed8e0421d40', 800),

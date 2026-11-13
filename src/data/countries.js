@@ -1,17 +1,18 @@
 // Countries where AfriYouth works (names must match the map data)
 // and which programs run there (program slugs from programs.js).
-const all = ['youth-research-fellowship', 'policy-innovation-lab', 'design-for-change-bootcamp',
-  'venture-builder', 'futures-academy', 'impact-leaders']
+// Placeholder list — replace with AfriYouth's real countries.
+const all = ['evidence-to-impact-accelerator', 'innovation-accelerator', 'policy-innovation-challenge',
+  'employability-bootcamp', 'university-employability-programme', 'professional-development-academy']
 
 export const activeCountries = {
   Rwanda: { hub: true, programs: all },
-  Kenya: { programs: ['youth-research-fellowship', 'venture-builder', 'design-for-change-bootcamp'] },
-  Uganda: { programs: ['design-for-change-bootcamp', 'impact-leaders'] },
-  Tanzania: { programs: ['youth-research-fellowship'] },
-  Nigeria: { programs: ['venture-builder', 'futures-academy', 'design-for-change-bootcamp'] },
-  Ghana: { programs: ['policy-innovation-lab', 'futures-academy'] },
-  Senegal: { programs: ['futures-academy'] },
-  Ethiopia: { programs: ['youth-research-fellowship', 'impact-leaders'] },
-  'South Africa': { programs: ['impact-leaders', 'venture-builder'] },
-  Zambia: { programs: ['design-for-change-bootcamp'] },
+  Kenya: { programs: ['innovation-accelerator', 'policy-innovation-challenge', 'employability-bootcamp'] },
+  Uganda: { programs: ['university-employability-programme', 'employability-bootcamp'] },
+  Tanzania: { programs: ['policy-innovation-challenge'] },
+  Nigeria: { programs: ['innovation-accelerator', 'professional-development-academy', 'policy-innovation-challenge'] },
+  Ghana: { programs: ['policy-innovation-challenge', 'evidence-to-impact-accelerator'] },
+  Senegal: { programs: ['professional-development-academy'] },
+  Ethiopia: { programs: ['evidence-to-impact-accelerator', 'university-employability-programme'] },
+  'South Africa': { programs: ['innovation-accelerator', 'professional-development-academy'] },
+  Zambia: { programs: ['employability-bootcamp'] },
 }

@@ -24,7 +24,7 @@ export default function HeroMap({ selected, peek, onSelect, onPeek }) {
       <MapPatterns />
       {africa.map((c, i) => {
         const active = activeCountries[c.name]
-        const fill = selected === c.name && !peek ? '#12093f'
+        const fill = selected === c.name && !peek ? '#0d0624'
           : peek === c.name ? '#7f87cc'
           : active ? mapFills[(i * 7) % mapFills.length] : '#d3d6ec'
         return (
@@ -40,8 +40,8 @@ export default function HeroMap({ selected, peek, onSelect, onPeek }) {
       {/* Dot on the country in focus, so small countries are easy to see */}
       {spot && (
         <g className="pointer-events-none">
-          <circle cx={spot.cx} cy={spot.cy} r="14" fill="#ff751f" opacity=".35" className="animate-ping" style={{ transformOrigin: `${spot.cx}px ${spot.cy}px` }} />
-          <circle cx={spot.cx} cy={spot.cy} r="8" fill="#ff751f" stroke="#fff" strokeWidth="2.5" />
+          <circle cx={spot.cx} cy={spot.cy} r="14" fill="#c723df" opacity=".35" className="animate-ping" style={{ transformOrigin: `${spot.cx}px ${spot.cy}px` }} />
+          <circle cx={spot.cx} cy={spot.cy} r="8" fill="#c723df" stroke="#fff" strokeWidth="2.5" />
         </g>
       )}
     </svg>

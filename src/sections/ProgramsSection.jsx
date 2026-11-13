@@ -10,7 +10,7 @@ export default function ProgramsSection() {
       <div className="container-x">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <SectionHeading eyebrow="Programs" title="Grow your skills. Lead the change."
-            text="Fellowships, bootcamps and labs for students, young professionals and founders." />
+            text="Accelerators, challenges and academies for students, graduates, professionals and founders." />
           <Link to="/programs" className="font-bold text-royal hover:underline">View all programs →</Link>
         </div>
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">

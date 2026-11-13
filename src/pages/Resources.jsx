@@ -13,16 +13,16 @@ export default function Resources() {
 
   return (
     <>
-      <PageBanner eyebrow="Resources" title="Research, briefs and tools — all in one place."
-        text="Explore evidence and insights produced by and with Africa's youth." image={images.lecture} curve="ripple" />
+      <PageBanner eyebrow="Resources" title="Evidence, policy solutions and futures, all in one place."
+        text="AfriYouth Evidence Reports, the Policy Solutions Series, the Africa 2050 Futures Series and practical toolkits." image={images.vrDesk} curve="ripple" />
       <section className="py-16">
         <div className="container-x">
           <div className="flex flex-col gap-3 sm:flex-row">
             <input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Search resources…" aria-label="Search resources"
               className="flex-1 rounded-md border border-ink/15 px-6 py-3 outline-none focus:border-royal focus:ring-4 focus:ring-royal/15" />
-            <select value={area} onChange={(e) => setArea(e.target.value)} aria-label="Filter by area"
+            <select value={area} onChange={(e) => setArea(e.target.value)} aria-label="Filter by division"
               className="rounded-md border border-ink/15 px-6 py-3 outline-none focus:border-royal">
-              <option value="all">All areas</option>
+              <option value="all">All divisions</option>
               {pillars.map((p) => <option key={p.slug} value={p.slug}>{p.title}</option>)}
             </select>
           </div>

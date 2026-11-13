@@ -4,7 +4,7 @@ import { ArrowRight, FileText } from 'lucide-react'
 // Large dropdown panel: link columns on the left, featured photo on the right.
 export default function MegaMenu({ item, onClose }) {
   return (
-    <div className="absolute inset-x-0 top-full border-t border-ink/10 bg-white shadow-[0_24px_40px_-24px_#12093f40]" onClick={onClose}>
+    <div className="absolute inset-x-0 top-full border-t border-ink/10 bg-white shadow-[0_24px_40px_-24px_#0d062440]" onClick={onClose}>
       <div className="container-x grid gap-12 py-10 lg:grid-cols-[1fr_1fr_1.4fr]">
         {item.columns.map((col) => (
           <div key={col.heading}>

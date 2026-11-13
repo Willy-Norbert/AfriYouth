@@ -1,17 +1,18 @@
 import { images } from './images'
 
-// Publications and resources.
+// Publications and resources — AfriYouth's product series.
+// Titles are examples until the first publications are released.
 export const resources = [
-  { title: 'The State of Youth Employment in East Africa', type: 'Research report', pillar: 'research',
-    date: 'Oct 2026', image: images.benchLaptops, tags: ['Jobs', 'Skills'] },
-  { title: 'Five Policy Options for Youth-Inclusive Digital Economies', type: 'Policy brief', pillar: 'policy',
-    date: 'Sep 2026', image: images.meeting, tags: ['Digital', 'Policy'] },
-  { title: 'Designing With Communities: A Practical Toolkit', type: 'Toolkit', pillar: 'design',
-    date: 'Aug 2026', image: images.workshop, tags: ['HCD', 'Toolkit'] },
-  { title: 'Africa 2040: Four Futures for Young People', type: 'Foresight report', pillar: 'foresight',
-    date: 'Jul 2026', image: images.lecture, tags: ['Futures'] },
-  { title: 'What Young Founders Need to Grow', type: 'Article', pillar: 'entrepreneurship',
-    date: 'Jun 2026', image: images.founder, tags: ['Startups'] },
-  { title: 'Measuring Youth Programs That Matter', type: 'Guide', pillar: 'impact',
-    date: 'May 2026', image: images.coding, tags: ['MEL'] },
+  { title: 'Africa’s Youth Workforce in 2050: Four Possible Futures', type: 'Africa 2050 Futures Series', pillar: 'foresight',
+    date: 'Oct 2026', image: images.vrDesk, tags: ['Futures', 'Work'] },
+  { title: 'Youth Employment in East Africa: What the Evidence Says', type: 'Evidence Report', pillar: 'research',
+    date: 'Sep 2026', image: images.benchLaptops, tags: ['Jobs', 'Skills'] },
+  { title: 'Policy Options for Youth-Inclusive Digital Economies', type: 'Policy Solutions Series', pillar: 'policy',
+    date: 'Aug 2026', image: images.meeting, tags: ['Digital', 'Policy'] },
+  { title: 'Human-Centered Design: A Practical Toolkit', type: 'Toolkit', pillar: 'innovation',
+    date: 'Jul 2026', image: images.workshop, tags: ['HCD', 'Toolkit'] },
+  { title: 'Beating the Applicant Tracking System', type: 'Employability Guide', pillar: 'leadership',
+    date: 'Jun 2026', image: images.vrLearning, tags: ['Careers', 'ATS'] },
+  { title: 'From Theory of Change to Impact Dashboard', type: 'Impact & Learning Guide', pillar: 'leadership',
+    date: 'May 2026', image: images.coding, tags: ['M&E', 'Impact'] },
 ]

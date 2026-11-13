@@ -1,14 +1,14 @@
 import { Link } from 'react-router-dom'
 
-// Official AfriYouth Innovation Labs logo (public/logo-web.png).
-// `light` is used on dark backgrounds (footer): the logo sits on a white card
-// so its dark text and white letter fills stay visible.
+// Official AfriYouth Innovation Labs logo, from the brand guidelines.
+// public/logo.svg       – full colour, for light backgrounds (navbar)
+// public/logo-white.svg – white with tagline, for dark backgrounds (footer)
 export default function Logo({ light = false, className = '' }) {
   return (
-    <Link to="/" aria-label="AfriYouth Innovation Labs home"
-      className={`inline-flex shrink-0 items-center ${light ? 'rounded-lg bg-white px-4 py-3' : ''} ${className}`}>
-      <img src="/logo-web.png" alt="AfriYouth Innovation Labs" width="900" height="385"
-        className={`w-auto ${light ? 'h-16' : 'h-14'}`} />
+    <Link to="/" aria-label="AfriYouth Innovation Labs home" className={`inline-flex shrink-0 items-center ${className}`}>
+      {light
+        ? <img src="/logo-white.svg" alt="AfriYouth Innovation Labs — Fueling Innovators for Sustainable Development" width="262" height="128" className="h-24 w-auto" />
+        : <img src="/logo.svg" alt="AfriYouth Innovation Labs" width="186" height="128" className="h-16 w-auto" />}
     </Link>
   )
 }

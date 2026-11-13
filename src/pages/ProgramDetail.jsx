@@ -2,11 +2,17 @@ import { Link, useParams } from 'react-router-dom'
 import PageBanner from '../components/PageBanner'
 import OpportunityList from '../components/OpportunityList'
 import Button from '../components/Button'
+import PinBoard from '../components/PinBoard'
+import TapedPhoto from '../components/TapedPhoto'
 import NotFound from './NotFound'
 import { programs } from '../data/programs'
+import { pillars } from '../data/pillars'
 import { opportunities } from '../data/opportunities'
 
-// A plain list with thin dividers and a short orange dash before each line
+// Cards per rope on large screens, by number of steps (full class names for Tailwind)
+const ropeCols = { 2: 'lg:grid-cols-2', 3: 'lg:grid-cols-3', 4: 'lg:grid-cols-4', 5: 'lg:grid-cols-5', 6: 'lg:grid-cols-6' }
+
+// A plain list with thin dividers and a short pink dash before each line
 function DashList({ title, items }) {
   return (
     <div>
@@ -28,7 +34,8 @@ export default function ProgramDetail() {
   const program = programs.find((p) => p.slug === slug)
   if (!program) return <NotFound />
   const related = opportunities.filter((o) => o.program === slug && o.status !== 'closed')
-  const facts = [['Duration', program.duration], ['Format', program.format], ['Who it’s for', program.audience]]
+  const division = pillars.find((p) => p.slug === program.pillar)
+  const facts = [['Division', division.title], ['Who it’s for', program.audience], ['Ends with', program.outcome]]
 
   return (
     <>
@@ -58,18 +65,27 @@ export default function ProgramDetail() {
             <p className="text-sm font-bold uppercase tracking-[0.2em] text-tangerine">About the program</p>
             <p className="mt-5 font-display text-2xl leading-snug sm:text-3xl">{program.about}</p>
           </div>
-          <div className="relative mx-auto w-full max-w-sm">
-            <span className="absolute -top-3 left-1/2 z-10 h-6 w-24 -translate-x-1/2 -rotate-3 bg-sun/80" aria-hidden="true" />
-            <img src={program.image} alt="" className="aspect-[4/5] w-full rotate-2 border-[10px] border-white bg-sky object-cover shadow-xl" />
+          <TapedPhoto src={program.image} className="max-w-sm rotate-2" aspect="aspect-[4/5]" />
+        </div>
+      </section>
+
+      {/* The journey, step by step */}
+      <section className="bg-ink py-20 text-white">
+        <div className="container-x">
+          <p className="text-sm font-bold uppercase tracking-[0.2em] text-sun">How it works</p>
+          {/* Steps as paper cards pinned along a rope */}
+          <div className="mt-14">
+            <PinBoard steps={program.journey} rope
+              listClass={`grid grid-cols-2 justify-items-center gap-x-6 gap-y-16 sm:grid-cols-3 lg:gap-x-8 ${ropeCols[program.journey.length] || 'lg:grid-cols-5'}`} />
           </div>
         </div>
       </section>
 
-      {/* Who can apply / what you'll gain */}
+      {/* What it covers / what you'll do */}
       <section className="bg-cream py-20">
         <div className="container-x grid gap-14 md:grid-cols-2">
-          <DashList title="Who can apply" items={program.eligibility} />
-          <DashList title="What you’ll gain" items={program.benefits} />
+          <DashList title={program.coversLabel || 'What it covers'} items={program.covers} />
+          <DashList title={program.gainsLabel || 'What you’ll do and gain'} items={program.gains} />
         </div>
       </section>
 
