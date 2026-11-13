@@ -41,6 +41,19 @@ html {
   background-color: var(--color-ink);
 }
 
+/* Sticky footer: the app fills at least the full screen height and the page
+   content grows, so the footer always sits at the bottom with no empty space
+   under it, even on short pages. (dvh avoids gaps when mobile address bars move.) */
+#root {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100dvh;
+  flex-direction: column;
+}
+#root > main {
+  flex: 1 0 auto;
+}
+
 img {
   color: transparent; /* hide alt text while images load */
 }
